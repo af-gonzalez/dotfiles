@@ -1,0 +1,14 @@
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$hg_branch\
+$golang\
+$nodejs\
+$line_break\
+$character
+"""
+
+[golang]
+symbol = ''

@@ -1,0 +1,31 @@
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+
+yabai -m config top_padding 15
+yabai -m config bottom_padding 15
+yabai -m config left_padding 15
+yabai -m config right_padding 15
+yabai -m config window_gap 15
+
+yabai -m config mouse_follows_focus off
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+yabai -m mouse_drop_action swap
+yabai -m rule --add app="^WebStorm$" space=1
+yabai -m rule --add app="^Arc$" space=4
+yabai -m rule --add app="^Slack$" space=2
+yabai -m rule --add app="^Mail$" space=2
+yabai -m rule --add app="^WhatsApp$" space=3
+yabai -m rule --add app="^Music$" space=3
+yabai -m rule --add app="^WebStorm$" title="^Settings" manage=off
+yabai -m rule --add app="^WebStorm$" title="^Create" manage=off
+yabai -m rule --add app="^WebStorm$" title="^Merge" manage=off
+yabai -m rule --add app="^WebStorm$" title="^Rename" manage=off
+yabai -m rule --add app="^WebStorm$" title="^Conflicts" manage=off
+yabai -m rule --add app="^WebStorm$" title="^Commit Changes" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Proton Pass$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
