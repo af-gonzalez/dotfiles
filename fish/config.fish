@@ -4,9 +4,8 @@ end
 
 set fish_greeting
 set -gx GOPATH ~/.go
-set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $HOME/.nix-profile/bin $PATH
+set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $PATH
 set -gx KUBE_CONFIG_PATH ~/.kube/config
-set -gx BUDGET_SERVICE_DB 'postgresql://postgres:postgres@worklab.hlab:5432/budget_service?sslmode=disable'
 alias k kubectl
 alias nv nvim
 
@@ -18,3 +17,8 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+#
+set -l env_file ~/.config/fish/env.fish
+if test -f $env_file
+    source $env_file
+end
