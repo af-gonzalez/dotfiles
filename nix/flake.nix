@@ -37,6 +37,9 @@
           pkgs.yarn
           pkgs.pnpm
           pkgs.postgresql_16
+          pkgs.jankyborders
+          pkgs.google-cloud-sdk
+          pkgs.go
         ];
 
       fonts.packages = [

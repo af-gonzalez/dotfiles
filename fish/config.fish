@@ -7,7 +7,7 @@ set -gx GOPATH ~/.go
 set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $PATH
 set -gx KUBE_CONFIG_PATH ~/.kube/config
 alias k kubectl
-alias nv nvim
+alias n nvim
 
 starship init fish | source
 
