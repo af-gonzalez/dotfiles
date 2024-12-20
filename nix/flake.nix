@@ -40,6 +40,7 @@
           pkgs.jankyborders
           pkgs.google-cloud-sdk
           pkgs.go
+          pkgs.qmk
         ];
 
       fonts.packages = [
@@ -50,6 +51,7 @@
         enable = true;
         casks = [
           "wezterm"
+          "qmk-toolbox"
         ];
       };
 
