@@ -14,7 +14,7 @@
     ".wezterm.lua".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/wezterm/.wezterm.lua";
     ".config/yabai".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/yabai";
     ".config/skhd".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/skhd";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/neovim";
   };
 
   home.sessionVariables = {};
