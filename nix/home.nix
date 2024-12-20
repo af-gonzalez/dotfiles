@@ -15,6 +15,7 @@
     ".config/yabai".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/yabai";
     ".config/skhd".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/skhd";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/neovim";
+    "qmk_firmware/keyboards/bluebell/swoop/keymaps/andresfgonz".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/qmk/andresfgonz";
   };
 
   home.sessionVariables = {};
