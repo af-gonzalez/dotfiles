@@ -44,7 +44,7 @@
         ];
 
       fonts.packages = [
-        (pkgs.nerdfonts.override { fonts = ["Recursive"]; })
+          pkgs.nerd-fonts.recursive-mono
       ];
 
       homebrew = {

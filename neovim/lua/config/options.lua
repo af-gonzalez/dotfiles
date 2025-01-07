@@ -3,7 +3,7 @@
 -- Add any additional options here
 --
 
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = "tab:>>,trail:~,extends:>,precedes:<,space:·"
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
