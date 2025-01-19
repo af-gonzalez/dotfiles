@@ -41,6 +41,7 @@
           pkgs.google-cloud-sdk
           pkgs.go
           pkgs.qmk
+          pkgs.deno
         ];
 
       fonts.packages = [
