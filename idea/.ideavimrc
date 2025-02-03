@@ -1,0 +1,24 @@
+Plug 'preservim/nerdtree'
+set relativenumber
+set functiontextobj
+set number
+set visualbell
+set quickscope
+set clipboard+=unnamed
+
+let mapleader="\"
+
+nmap <leader>p "0p
+nmap <leader>ws <Action>(MoveTabRight)
+nmap <leader>wS <Action>(MoveTabDown)
+nmap <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+vmap <leader>ai <Action>(AIIntentionsActionGroup)
+vmap <leader>p "0p
+nmap gr <Action>(ShowUsages)
+nmap gh <Action>(ShowErrorDescription)
+
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap s <Action>(AceAction)
