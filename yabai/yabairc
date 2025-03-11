@@ -19,12 +19,15 @@ yabai -m rule --add app="^Slack$" space=2
 yabai -m rule --add app="^Mail$" space=2
 yabai -m rule --add app="^WhatsApp$" space=3
 yabai -m rule --add app="^Music$" space=3
-yabai -m rule --add app="^WebStorm$" title="^Settings" manage=off
-yabai -m rule --add app="^WebStorm$" title="^Create" manage=off
-yabai -m rule --add app="^WebStorm$" title="^Merge" manage=off
-yabai -m rule --add app="^WebStorm$" title="^Rename" manage=off
-yabai -m rule --add app="^WebStorm$" title="^Conflicts" manage=off
-yabai -m rule --add app="^WebStorm$" title="^Commit Changes" manage=off
+yabai -m rule --add app="^IntelliJ IDEA" title="^Settings" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Create" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Merge" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Rename" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Conflicts" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Commit Changes" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Delete" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Move" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Add File" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Proton Pass$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
