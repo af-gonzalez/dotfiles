@@ -57,7 +57,6 @@
       };
 
       # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
       # nix.package = pkgs.nix;
 
       # Necessary for using flakes on this system.
@@ -75,12 +74,9 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
-      security.pam.enableSudoTouchIdAuth = true;
 
       users.users.andres.home = "/Users/andres";
       home-manager.backupFileExtension = "backup";
-      nix.configureBuildUsers = true;
-      nix.useDaemon = true;
     };
   in
   {
