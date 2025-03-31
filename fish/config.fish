@@ -8,6 +8,7 @@ set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $PATH
 set -gx KUBE_CONFIG_PATH ~/.kube/config
 alias k kubectl
 alias n nvim
+alias awslocal 'aws --endpoint-url=http://localhost:4566'
 
 starship init fish | source
 
