@@ -1,13 +1,20 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
-config.font = wezterm.font("RecMonoLinear Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("BlexMono Nerd Font", { weight = "Regular" })
 config.font_size = 16
+config.font_rules = {
+	{
+		intensity = "Normal",
+		italic = true,
+		font = wezterm.font("BlexMono Nerd Font", { weight = "Regular" }),
+	},
+}
 
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.color_scheme = "rose-pine"
+config.color_scheme = "Catppuccin Mocha"
 
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.97
 config.macos_window_background_blur = 9
 config.window_padding = {
 	left = 25,

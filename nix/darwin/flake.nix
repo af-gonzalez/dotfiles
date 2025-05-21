@@ -42,10 +42,12 @@
           pkgs.go
           pkgs.qmk
           pkgs.deno
+          pkgs.lazygit
         ];
 
       fonts.packages = [
           pkgs.nerd-fonts.recursive-mono
+          pkgs.nerd-fonts.blex-mono
       ];
 
       homebrew = {
@@ -71,6 +73,7 @@
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
       system.stateVersion = 5;
+      system.primaryUser = "andres";
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";

@@ -43,6 +43,7 @@ return {
     opts = {
       flavour = "mocha",
       no_italic = true,
+      transparent_background = true,
       integrations = {
         aerial = true,
         alpha = true,
@@ -83,7 +84,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "catppuccin",
     },
   },
 }

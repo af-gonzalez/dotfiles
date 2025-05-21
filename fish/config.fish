@@ -6,6 +6,8 @@ set fish_greeting
 set -gx GOPATH ~/.go
 set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $PATH
 set -gx KUBE_CONFIG_PATH ~/.kube/config
+set -gx JAVA_HOME /opt/homebrew/opt/openjdk
+set -gx ANDROID_HOME ~/Library/Android/sdk
 alias k kubectl
 alias n nvim
 alias awslocal 'aws --endpoint-url=http://localhost:4566'

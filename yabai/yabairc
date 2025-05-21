@@ -28,6 +28,9 @@ yabai -m rule --add app="^IntelliJ IDEA$" title="^Commit Changes" manage=off
 yabai -m rule --add app="^IntelliJ IDEA$" title="^Delete" manage=off
 yabai -m rule --add app="^IntelliJ IDEA$" title="^Move" manage=off
 yabai -m rule --add app="^IntelliJ IDEA$" title="^Add File" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="[Changes]$" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Rollback" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Merge Revisions" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Proton Pass$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
