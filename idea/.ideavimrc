@@ -1,10 +1,10 @@
 Plug 'preservim/nerdtree'
 set relativenumber
-set functiontextobj
 set number
 set visualbell
 set quickscope
 set clipboard+=unnamed
+set functiontextobj
 
 let mapleader="\"
 
