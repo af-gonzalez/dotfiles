@@ -32,8 +32,6 @@
           pkgs.fish
           pkgs.starship
           pkgs.fzf
-          pkgs.yabai
-          pkgs.skhd
           pkgs.yarn
           pkgs.pnpm
           pkgs.postgresql_16
@@ -48,6 +46,7 @@
       fonts.packages = [
           pkgs.nerd-fonts.recursive-mono
           pkgs.nerd-fonts.blex-mono
+          pkgs.nerd-fonts.fira-code
       ];
 
       homebrew = {
@@ -85,7 +84,7 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Andres-MacStudio
-    darwinConfigurations."Andres-MacStudio" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Andres-MBP" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [ 
         configuration 
