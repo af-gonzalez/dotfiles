@@ -11,6 +11,7 @@ set -gx ANDROID_HOME ~/Library/Android/sdk
 alias k kubectl
 alias n nvim
 alias awslocal 'aws --endpoint-url=http://localhost:4566'
+alias oc opencode
 
 starship init fish | source
 
