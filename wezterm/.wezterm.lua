@@ -12,7 +12,7 @@ config.font_rules = {
 
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.color_scheme = "Tokyo Night (Gogh)"
+config.color_scheme = "Catppuccin Mocha (Gogh)"
 
 config.window_background_opacity = 1
 config.macos_window_background_blur = 9

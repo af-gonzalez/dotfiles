@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 set fish_greeting
-set -gx GOPATH ~/.go
+set -gx GOPATH ~/go
 set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $PATH
 set -gx KUBE_CONFIG_PATH ~/.kube/config
 set -gx JAVA_HOME /opt/homebrew/opt/openjdk

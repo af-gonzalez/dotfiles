@@ -13,3 +13,21 @@ vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Window Left"
 vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Window Right" })
 vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Window Down" })
 vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Window Up" })
+
+-- Terminal keymaps
+vim.keymap.set("n", "<C-/>", function()
+  Snacks.terminal(nil, { cwd = LazyVim.root() })
+end, { desc = "Terminal (Root Dir)" })
+vim.keymap.set("n", "<leader>ts", function()
+  Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "bottom", height = 0.3 } })
+end, { desc = "Terminal Split (Root)" })
+vim.keymap.set("n", "<leader>tv", function()
+  Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "right", width = 0.4 } })
+end, { desc = "Terminal Vertical Split (Root)" })
+vim.keymap.set("n", "<leader>tS", function()
+  Snacks.terminal(nil, { win = { position = "bottom", height = 0.3 } })
+end, { desc = "Terminal Split (cwd)" })
+
+vim.keymap.set("n", "<leader>tV", function()
+  Snacks.terminal(nil, { win = { position = "left", width = 0.4 } })
+end, { desc = "Terminal Vertical Split (cwd)" })
