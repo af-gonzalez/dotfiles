@@ -1,0 +1,22 @@
+# Font configuration
+font-family = "FiraCode Nerd Font"
+font-size = 17
+font-style = regular
+
+# Font rules for italic
+font-family-italic = "FiraCode Nerd Font"
+font-style-italic = regular
+
+# Window configuration
+window-decoration = auto
+window-padding-x = 25
+window-padding-y = 25
+macos-titlebar-style = hidden
+macos-window-shadow = false
+
+# Theme - Catppuccin Mocha
+theme = catppuccin mocha
+
+# Background opacity (Ghostty uses 0-1 scale, 1 = fully opaque)
+background-opacity = 0.98
+
