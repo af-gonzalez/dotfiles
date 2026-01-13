@@ -16,14 +16,14 @@ vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Window Up" })
 
 vim.keymap.set("n", "<leader>tcc", function()
   Snacks.terminal("claude", { cwd = LazyVim.root(), win = { position = "right", width = 0.3 } })
-end, { desc = "Terminal Vertical Split (Root)" })
+end, { desc = "Claude Code terminal" })
 
 vim.keymap.set("n", "<leader>tcp", function()
   Snacks.terminal("copilot", { cwd = LazyVim.root(), win = { position = "right", width = 0.3 } })
-end, { desc = "Terminal Vertical Split (Root)" })
+end, { desc = "Github copilot terminal" })
 
 vim.keymap.set("n", "<leader>t1", function()
-  Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "float", width = 0.3 }, count = 1 })
+  Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "bottom", width = 0.3 }, count = 1 })
 end, { desc = "Terminal Vertical Split (Root)" })
 
 vim.keymap.set("n", "<leader>t2", function()
