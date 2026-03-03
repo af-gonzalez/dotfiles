@@ -32,7 +32,6 @@
           pkgs.fish
           pkgs.starship
           pkgs.fzf
-          pkgs.yarn
           pkgs.pnpm
           pkgs.postgresql_16
           pkgs.jankyborders

@@ -47,7 +47,7 @@ return {
       local data_path = vim.fn.stdpath("data")
 
       vim.g.db_ui_auto_execute_table_helpers = 1
-      vim.g.db_ui_save_location = data_path .. "/dadbod_ui"
+      vim.g.db_ui_save_location = vim.fn.getcwd() .. "/.dbui"
       vim.g.db_ui_show_database_icon = true
       vim.g.db_ui_tmp_query_location = data_path .. "/dadbod_ui/tmp"
       vim.g.db_ui_use_nerd_fonts = true
@@ -79,7 +79,9 @@ return {
         ft = "dbui",
         pinned = true,
         width = 0.3,
-        open = function() end,
+        open = function()
+          vim.cmd("DBUI")
+        end,
       })
 
       opts.bottom = opts.bottom or {}
@@ -89,36 +91,50 @@ return {
       })
     end,
   },
+
+  -- blink.cmp integration
+  {
+    "saghen/blink.cmp",
+    optional = true,
+    opts = {
+      sources = {
+        default = { "dadbod" },
+        providers = {
+          dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+        },
+      },
+    },
+    dependencies = {
+      "kristijanhusak/vim-dadbod-completion",
+    },
+  },
+
+  -- Linters & formatters
+  {
+    "mason-org/mason.nvim",
+    opts = { ensure_installed = { "sqlfluff" } },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = function(_, opts)
+      for _, ft in ipairs(sql_ft) do
+        opts.linters_by_ft[ft] = opts.linters_by_ft[ft] or {}
+        table.insert(opts.linters_by_ft[ft], "sqlfluff")
+      end
+    end,
+  },
   {
     "stevearc/conform.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.formatters_by_ft["sql"] = { "sql_formatter" }
-      opts.formatters.sql_formatter = {
-        args = function(ctx)
-          local args = {}
-          local found = vim.fs.find(".sql-formatter.json", { upward = true, path = ctx.dirname })[1]
-          if found then
-            vim.list_extend(args, { "--config", found })
-          end
-          return args
-        end,
+      opts.formatters.sqlfluff = {
+        args = { "format", "-" },
       }
-      opts.formatters.injected = {
-        options = {
-          ignore_errors = true,
-          lang_to_formatters = {
-            sql = { "sql_formatter" },
-          },
-          lang_to_ext = {
-            sql = "sql",
-          },
-        },
-      }
+      for _, ft in ipairs(sql_ft) do
+        opts.formatters_by_ft[ft] = opts.formatters_by_ft[ft] or {}
+        table.insert(opts.formatters_by_ft[ft], "sqlfluff")
+      end
     end,
-  },
-  {
-    "mason-org/mason.nvim",
-    opts = { ensure_installed = { "sql-formatter" } },
   },
 }
