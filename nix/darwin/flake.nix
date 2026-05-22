@@ -40,18 +40,27 @@
           pkgs.qmk
           pkgs.deno
           pkgs.lazygit
+          pkgs.nodejs_22
+          pkgs.atlas
+          pkgs.golangci-lint
+          pkgs.protobuf
         ];
 
       fonts.packages = [
           pkgs.nerd-fonts.recursive-mono
           pkgs.nerd-fonts.blex-mono
           pkgs.nerd-fonts.fira-code
+          pkgs.nerd-fonts.hack
+          pkgs.nerd-fonts.victor-mono
+          pkgs.nerd-fonts.jetbrains-mono
+          pkgs.nerd-fonts.commit-mono
+          pkgs.nerd-fonts._0xproto
+          pkgs.nerd-fonts.caskaydia-mono
       ];
 
       homebrew = {
         enable = true;
         casks = [
-          "wezterm"
           "qmk-toolbox"
         ];
       };

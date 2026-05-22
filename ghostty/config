@@ -1,12 +1,12 @@
 # Font configuration
-font-family = "BlexMono Nerd Font"
+font-family = "recmonolinear Nerd Font mono"
 font-size = 17
 font-style = regular
-adjust-cell-height = -4
+adjust-cell-height = 0
 
 # Font rules for italic
-font-family-italic = "BlexMono Nerd Font"
-font-style-italic = regular
+font-family-italic = "recmonolinear Nerd Font mono"
+font-style-italic = Regular
 
 # Window configuration
 window-decoration = auto
@@ -15,9 +15,9 @@ window-padding-y = 25
 macos-titlebar-style = hidden
 macos-window-shadow = false
 
-# Theme - Catppuccin Mocha
-theme = catppuccin mocha
+theme = rose pine
 
-# Background opacity (Ghostty uses 0-1 scale, 1 = fully opaque)
-background-opacity = 0.98
+background-opacity = 0.97
+background-blur = true
 
+macos-option-as-alt = true

@@ -12,6 +12,7 @@ alias k kubectl
 alias n nvim
 alias awslocal 'aws --endpoint-url=http://localhost:4566'
 alias oc opencode
+alias ll 'eza -laF --icons -TL 1 --group-directories-first --git --color=never'
 
 starship init fish | source
 
