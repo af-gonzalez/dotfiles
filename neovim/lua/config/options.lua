@@ -11,3 +11,4 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.mouse = "niv"
 vim.opt.mousescroll = "ver:5,hor:5"
 vim.o.scroll = 20
+vim.opt.termguicolors = true

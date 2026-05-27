@@ -129,7 +129,7 @@ return {
     optional = true,
     opts = function(_, opts)
       opts.formatters.sqlfluff = {
-        args = { "format", "-" },
+        args = { "fix", "-" },
       }
       for _, ft in ipairs(sql_ft) do
         opts.formatters_by_ft[ft] = opts.formatters_by_ft[ft] or {}

@@ -13,8 +13,11 @@ return {
         layout = "ivy",
         sources = {
           explorer = {
+            layout = { preset = "ivy", preview = "true" },
             hidden = true,
-            auto_close = false,
+            ignored = true,
+            gitignored = true,
+            auto_close = true,
             win = {
               list = {
                 keys = {
@@ -32,12 +35,12 @@ return {
             return LazyVim.pick(cmd, opts)()
           end,
           header = [[
- █████╗ ███╗   ██╗██████╗ ██╗   ██╗    ███████╗████████╗██╗    ██╗
-██╔══██╗████╗  ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝╚══██╔══╝██║    ██║
-███████║██╔██╗ ██║██║  ██║ ╚████╔╝     █████╗     ██║   ██║ █╗ ██║
-██╔══██║██║╚██╗██║██║  ██║  ╚██╔╝      ██╔══╝     ██║   ██║███╗██║
-██║  ██║██║ ╚████║██████╔╝   ██║       ██║        ██║   ╚███╔███╔╝
-╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝       ╚═╝        ╚═╝    ╚══╝╚══╝ ]],
+ █████╗ ███╗   ██╗██████╗ ██╗   ██╗███████╗████████╗██╗    ██╗
+██╔══██╗████╗  ██║██╔══██╗╚██╗ ██╔╝██╔════╝╚══██╔══╝██║    ██║
+███████║██╔██╗ ██║██║  ██║ ╚████╔╝ █████╗     ██║   ██║ █╗ ██║
+██╔══██║██║╚██╗██║██║  ██║  ╚██╔╝  ██╔══╝     ██║   ██║███╗██║
+██║  ██║██║ ╚████║██████╔╝   ██║   ██║        ██║   ╚███╔███╔╝
+╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝   ╚═╝        ╚═╝    ╚══╝╚══╝ ]],
         -- stylua: ignore
         ---@type snacks.dashboard.Item[]
         keys = {
@@ -52,6 +55,32 @@ return {
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
         },
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      setup = {
+        gopls = function(_, opts)
+          Snacks.util.lsp.on({ name = "gopls" }, function(_, client)
+            if not client.server_capabilities.semanticTokensProvider then
+              local capabilities = client.config and client.config.capabilities
+              local textDocument = capabilities and capabilities.textDocument
+              local semantic = textDocument and textDocument.semanticTokens
+              if semantic then
+                client.server_capabilities.semanticTokensProvider = {
+                  full = true,
+                  legend = {
+                    tokenTypes = semantic.tokenTypes,
+                    tokenModifiers = semantic.tokenModifiers,
+                  },
+                  range = true,
+                }
+              end
+            end
+          end)
+        end,
       },
     },
   },

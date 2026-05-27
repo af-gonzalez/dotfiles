@@ -1,12 +1,13 @@
 # Font configuration
-font-family = "recmonolinear Nerd Font mono"
-font-size = 17
+font-family = "blexmono Nerd Font mono"
+font-size = 16
 font-style = regular
 adjust-cell-height = 0
 
 # Font rules for italic
-font-family-italic = "recmonolinear Nerd Font mono"
+font-family-italic = "blexmono Nerd Font mono"
 font-style-italic = Regular
+font-thicken = true
 
 # Window configuration
 window-decoration = auto
@@ -17,7 +18,7 @@ macos-window-shadow = false
 
 theme = rose pine
 
-background-opacity = 0.97
+background-opacity = 0.95
 background-blur = true
 
 macos-option-as-alt = true

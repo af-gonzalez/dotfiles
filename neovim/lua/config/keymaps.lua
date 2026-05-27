@@ -22,6 +22,10 @@ vim.keymap.set("n", "<leader>tcp", function()
   Snacks.terminal("copilot", { cwd = LazyVim.root(), win = { position = "right", width = 0.3 } })
 end, { desc = "Github copilot terminal" })
 
+vim.keymap.set("n", "<leader>tco", function()
+  Snacks.terminal("opencode", { cwd = LazyVim.root(), win = { position = "right", width = 0.3 } })
+end, { desc = "Github copilot terminal" })
+
 vim.keymap.set("n", "<leader>t1", function()
   Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "bottom", width = 0.3 }, count = 1 })
 end, { desc = "Terminal Vertical Split (Root)" })
