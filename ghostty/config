@@ -1,6 +1,6 @@
 # Font configuration
 font-family = "blexmono Nerd Font mono"
-font-size = 16
+font-size = 17
 font-style = regular
 adjust-cell-height = 0
 
@@ -16,9 +16,9 @@ window-padding-y = 25
 macos-titlebar-style = hidden
 macos-window-shadow = false
 
-theme = rose pine
+theme = TokyoNight Night
 
-background-opacity = 0.95
+background-opacity = 0.97
 background-blur = true
 
 macos-option-as-alt = true

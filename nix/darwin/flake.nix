@@ -56,6 +56,7 @@
           pkgs.nerd-fonts.commit-mono
           pkgs.nerd-fonts._0xproto
           pkgs.nerd-fonts.caskaydia-mono
+          pkgs.nerd-fonts.comic-shanns-mono
       ];
 
       homebrew = {
