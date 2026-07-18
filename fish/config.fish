@@ -6,13 +6,16 @@ set fish_greeting
 set -gx GOPATH ~/go
 set -gx JAVA_HOME /opt/homebrew/opt/openjdk@17
 set -gx ANDROID_HOME ~/Library/Android/sdk
-set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $JAVA_HOME/bin $ANDROID_HOME/emulator $ANDROID_HOME/platform-tools ~/.local/bin $PATH
+set -gx PATH /opt/homebrew/bin $GOPATH/bin /run/current-system/sw/bin $JAVA_HOME/bin $ANDROID_HOME/emulator $ANDROID_HOME/platform-tools ~/.local/bin ~/.local/npm/bin $PATH
 set -gx KUBE_CONFIG_PATH ~/.kube/config
 alias k kubectl
 alias n nvim
 alias awslocal 'aws --endpoint-url=http://localhost:4566'
 alias oc opencode
 alias ll 'eza -laF --icons -TL 1 --group-directories-first --git --color=never'
+
+alias claude-hoag 'env CLAUDE_CONFIG_DIR=$HOME/.claude-hoag claude $argv'
+alias claude-monetago 'env CLAUDE_CONFIG_DIR=$HOME/.claude-monetago claude $argv'
 
 starship init fish | source
 

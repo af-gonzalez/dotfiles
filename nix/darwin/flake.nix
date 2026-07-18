@@ -93,7 +93,7 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Andres-MacStudio
-    darwinConfigurations."Andres-MBP" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Revelo-MBP" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [ 
         configuration 
