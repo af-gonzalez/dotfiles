@@ -37,3 +37,5 @@ end, { desc = "Terminal Vertical Split (Root)" })
 vim.keymap.set("n", "<leader>t3", function()
   Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "bottom", width = 0.3 }, count = 3 })
 end, { desc = "Terminal Vertical Split (Root)" })
+
+vim.keymap.set("n", "<leader>go", "<cmd>Differ<CR>", { desc = "Git differ" })

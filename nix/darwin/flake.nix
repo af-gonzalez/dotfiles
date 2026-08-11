@@ -44,6 +44,7 @@
           pkgs.atlas
           pkgs.golangci-lint
           pkgs.protobuf
+          pkgs.mongosh
         ];
 
       fonts.packages = [
