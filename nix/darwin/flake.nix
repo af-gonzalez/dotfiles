@@ -58,6 +58,10 @@
           pkgs.nerd-fonts._0xproto
           pkgs.nerd-fonts.caskaydia-mono
           pkgs.nerd-fonts.comic-shanns-mono
+          pkgs.nerd-fonts.noto
+          pkgs.nerd-fonts.overpass
+          pkgs.nerd-fonts.ubuntu-mono
+          pkgs.nerd-fonts.googlesanscode
       ];
 
       homebrew = {
